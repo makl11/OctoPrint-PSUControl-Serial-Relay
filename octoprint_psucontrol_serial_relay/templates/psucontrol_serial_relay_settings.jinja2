@@ -1,0 +1,25 @@
+<!-- ko ifnot: settings.plugins.psucontrol -->
+<span class="help-inline label label-important">This plugin requires <a href="https://plugins.octoprint.org/plugins/psucontrol/"
+    target="_blank">PSU Control</a> in order to function. It can be installed from the Plugin Manager.</span>
+<!-- /ko -->
+<form class="form-horizontal">
+    <h4>Connection Settings</h4>
+    <div class="control-group" title="{{ _('Serial port to connect to') }}">
+        <label class="control-label"
+               for="settings-psucontrol-serial-relay-serialPort">{{ _('Serial Port') }}</label>
+        <div class="controls">
+            <select id="settings-psucontrol-serial-relay-serialPort"
+                    data-bind="options: serial_portOptions, value: settings.plugins.psucontrol_serial_relay.port">
+            </select>
+        </div>
+    </div>
+    <div class="control-group"
+         title="{{ _('Serial baud rate to connect with') }}">
+        <label class="control-label" for="settings-psucontrol-serial-relay-baudrate">{{ _('Baudrate') }}</label>
+        <div class="controls">
+            <select id="settings-psucontrol-serial-relay-baudrate"
+                    data-bind="options: serial_baudrateOptions, value: settings.plugins.psucontrol_serial_relay.baudrate">
+            </select>
+        </div>
+    </div>
+</form>
