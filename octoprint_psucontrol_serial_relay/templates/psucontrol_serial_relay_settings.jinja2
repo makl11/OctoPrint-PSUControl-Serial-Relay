@@ -11,6 +11,11 @@
             <select id="settings-psucontrol-serial-relay-serialPort"
                     data-bind="options: serial_portOptions, value: settings.plugins.psucontrol_serial_relay.port">
             </select>
+            <a href="#"
+               data-bind="click: function() { $root.requestData(); }"
+               title="{{ _('Refresh connection options') }}">
+                <i class="fas fa-sync"></i>
+            </a>
         </div>
     </div>
     <div class="control-group"
