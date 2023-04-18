@@ -9,7 +9,7 @@
                for="settings-psucontrol-serial-relay-serialPort">{{ _('Serial Port') }}</label>
         <div class="controls">
             <select id="settings-psucontrol-serial-relay-serialPort"
-                    data-bind="options: serial_portOptions, value: settings.plugins.psucontrol_serial_relay.port">
+                    data-bind="options: serial_portOptions, optionsCaption: 'Disabled', value: settings.plugins.psucontrol_serial_relay.port">
             </select>
             <a href="#"
                data-bind="click: function() { $root.requestData(); }"
